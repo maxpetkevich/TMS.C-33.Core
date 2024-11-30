@@ -12,7 +12,7 @@ public class ArithmeticOperators {
         getTaskFour();
         System.out.println("Task 5");
         getTaskFive();
-        System.out.println("Task 6");
+        System.out.println("Task 6*");
         getTaskSix();
     }
     public static void getTaskOne(){
