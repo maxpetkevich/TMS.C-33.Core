@@ -34,7 +34,7 @@ public class Operators {
             System.out.println("Warm\n");
         } else if (temperature > -20) {
             System.out.println("Normal\n");
-        } else if (temperature < -20) {
+        } else {
             System.out.println("Cold\n");
         }
     }
@@ -58,13 +58,13 @@ public class Operators {
     public static void getTaskFive() {
         Scanner input = new Scanner(System.in);
         System.out.print("Please, enter value A: ");
-        int A = input.nextInt();
-        while (A < 0) {
-            System.out.println("A needed > 0");
-            A = input.nextInt();
+        int enterValue = input.nextInt();
+        while (enterValue < 0) {
+            System.out.println("Value must be > 0");
+            enterValue = input.nextInt();
         }
         int result = 0;
-        for (int value = 1; value <= A; value++) {
+        for (int value = 1; value <= enterValue; value++) {
             result += value;
         }
         System.out.println(result);
