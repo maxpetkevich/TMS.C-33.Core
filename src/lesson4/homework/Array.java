@@ -21,7 +21,7 @@ public class Array {
         System.out.print("Enter array size: ");
         int index = input.nextInt();
         int[] numbers = new int[index];
-        System.out.println("Select the type of array filling: 1)Random, 2)From keyboard: ");
+        System.out.println("Select the type of array filling:\n1)Random\n2)From keyboard");
         Random random = new Random();
         int typeFilling = input.nextInt();
         switch (typeFilling) {
@@ -46,7 +46,7 @@ public class Array {
     }
 
     public static void getTaskOne() {
-        System.out.println("Task 1: ");
+        System.out.println("Task 1:");
         int[] numbers = createArray();
         for (int i = 0; i < numbers.length; i++) {
             System.out.print(numbers[i] + " ");
@@ -59,6 +59,7 @@ public class Array {
     }
 
     public static void getTaskTwo() {
+        System.out.println("Task 2:");
         int[] numbers = createArray();
         int minValue = numbers[0];
         int maxValue = numbers[0];
@@ -75,6 +76,7 @@ public class Array {
     }
 
     public static void getTaskThree() {
+        System.out.println("Task 3:");
         int[] numbers = createArray();
         int minValue = numbers[0];
         int maxValue = numbers[0];
@@ -95,6 +97,7 @@ public class Array {
     }
 
     public static void getTaskFour() {
+        System.out.println("Task 4:");
         int[] numbers = createArray();
         int quantityZeroElements = 0;
         for (int i = 0; i < numbers.length; i++) {
@@ -111,6 +114,7 @@ public class Array {
     }
 
     public static void getTaskFive() {
+        System.out.println("Task 5:");
         int[] numbers = createArray();
         for (int i = 0; i < numbers.length / 2; i++) {
             int value = numbers[i];
@@ -124,6 +128,7 @@ public class Array {
     }
 
     public static void getTaskSix() {
+        System.out.println("Task 6:");
         int[] numbers = createArray();
         boolean isIncreases = true;
         for (int i = 1; i < numbers.length; i++) {
