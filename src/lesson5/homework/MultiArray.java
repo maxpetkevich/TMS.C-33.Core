@@ -1,7 +1,5 @@
 package lesson5.homework;
 
-import java.sql.SQLOutput;
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
