@@ -1,6 +1,6 @@
 
 //NOT FINISHED
-package lesson5.homework;
+package GuessWord;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -80,7 +80,8 @@ public class GuessWord {
             System.out.println("If you enter a letter, we will check if there is a match.");
             System.out.println("If there is, we open it on the table and game moves on.");
             System.out.println("If not, repeat and try to guess a letter.");
-            System.out.println("\u001B[4m" + "You have only 20 attempts to guess the word in full or by letter" + "\u001B[0m");
+            System.out.println("\u001B[4m" + "You have only 20 attempts to guess the word in full or by letter" +
+                               "\u001B[0m");
             System.out.println("\u001B[34m" + "If you have guessed all letters, you HAVE WON.");
             System.out.println("If you enter two or more characters than we check a word fully.");
             System.out.println("If you guessed the word, you HAVE WON.");
@@ -161,7 +162,8 @@ public class GuessWord {
                 }
             }
             if (letterIsCorrect) {
-                System.out.println("\u001B[32m" + "You entered the correct letter: " + new String(openWord) + " " + "\u001B[0m");
+                System.out.println("\u001B[32m" + "You entered the correct letter: " + new String(openWord) +
+                                   " " + "\u001B[0m");
                 if (Arrays.equals(hiddenWord, openWord)) {
                     getWonMessage();
                     return true;
