@@ -25,62 +25,51 @@ public class GuessWord {
         // Открыты и больше он не должен на них реагировать или же сказать, что вы уже эту букву открыли
         startGame();
     }
-
-    public static void startGame() {
+        public static void startGame (){
             welcome();
-            playOrNot();
-            play();
-            /*while (play) {
-                play();
-                System.out.println("\u001B[31m" + "------------------------------------------------------------------");
-                System.out.println("Do you want to play again? Enter 'y' to play again or any other value to leave: " + "\u001B[0m");
-                play();
-
-            }*/
-        }
-
-        public static void play (){
             char[] hiddenWord = getHiddenWord().toCharArray();
             char[] openWord = new char[hiddenWord.length];
             Arrays.fill(openWord, 0, openWord.length, '*');
-            if (getInput().nextLine().equals("y")) {
-                int attempt = 20;
-                getMessagePlay();
-                printWord(openWord);
-                System.out.println();
-                getInputMsg();
-                while ( attempt > 0 && attempt <= 20) {
-                    String input = getInput().nextLine();
-                    if (input.length() == 0) {
-                        System.out.print("You have entered no value. Please, re-enter: ");
-                        continue;
-                    } else if (input.length() == 1) {
-                        attempt--;
-                        if (checkLetter(input, hiddenWord, openWord)) {
+            while(true) {
+                playOrNot();
+                if (getInput().nextLine().equals("y")) {
+                    int attempt = 20;
+                    getMessagePlay();
+                    printWord(openWord);
+                    System.out.println();
+                    getInputMsg();
+                    while (attempt > 0 && attempt <= 20) {
+                        String input = getInput().nextLine();
+                        if (input.length() == 0) {
+                            System.out.print("You have entered no value. Please, re-enter: ");
+                            continue;
+                        } else if (input.length() == 1) {
+                            attempt--;
+                            if (checkLetter(input, hiddenWord, openWord)) {
+                                break;
+                            }
+                            System.out.println("You have " + attempt + " attempts left to guess the word");
+
+                        } else if (input.length() > 1) {
+                            attempt--;
+                            if (checkWord(input, hiddenWord)) {
+                                break;
+                            }
+                            System.out.println("You have " + attempt + " attempts left to guess the word");
+
+                        }
+                        if (attempt == 0) {
+                            getLossMessage(hiddenWord);
                             break;
                         }
-                        System.out.println("You have " + attempt + " attempts left to guess the word");
-
-                    } else if (input.length() > 1) {
-                        attempt--;
-                        if (checkWord(input, hiddenWord)) {
-                            break;
-                        }
-                        System.out.println("You have " + attempt + " attempts left to guess the word");
 
                     }
-                    if (attempt == 0) {
-                        getLossMessage(hiddenWord);
-                        break;
-                    }
 
+                } else {
+                    System.out.println("\u001B[35m" + "You have decided to leave a game... GOODBYE!" + "\u001B[0m");
+                    return;
                 }
-
-            } else {
-                System.out.println("\u001B[35m" + "You have decided to leave a game... GOODBYE!" + "\u001B[0m");
-                return;
             }
-
     }
 
         public static void welcome () {
@@ -106,7 +95,7 @@ public class GuessWord {
                     "Banana",
                     "Flat",
                     "House",
-                    /*"Pineapple",
+                    "Pineapple",
                     "Belarus",
                     "Georgia",
                     "Infrastructure",
@@ -117,7 +106,7 @@ public class GuessWord {
                     "Stars",
                     "Mexico",
                     "Watermelon",
-                    "Housekeeper"*/
+                    "Housekeeper"
             };
         }
 
