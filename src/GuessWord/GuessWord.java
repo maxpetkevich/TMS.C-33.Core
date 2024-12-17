@@ -1,5 +1,4 @@
 
-//NOT FINISHED
 package GuessWord;
 
 import java.util.Arrays;
