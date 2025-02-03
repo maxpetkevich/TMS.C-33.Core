@@ -19,6 +19,7 @@ public class LongestWordWrite {
             }
         } catch (IOException e) {
             System.out.println(e.getMessage());
+
         }
     }
     public static void writeLongestWord(){
