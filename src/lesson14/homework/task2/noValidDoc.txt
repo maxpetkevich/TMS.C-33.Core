@@ -1,0 +1,6 @@
+fdgfdgfdgfdgfd - this document number don't start with docnum or contract or haven't 15 characters
+contract12345 - this document number don't start with docnum or contract or haven't 15 characters
+docnum123 - this document number don't start with docnum or contract or haven't 15 characters
+dsfsd - this document number don't start with docnum or contract or haven't 15 characters
+novalid - this document number don't start with docnum or contract or haven't 15 characters
+no valid - this document number don't start with docnum or contract or haven't 15 characters
