@@ -1,11 +1,11 @@
-package lesson14.homework;
+package lesson14.homework.task1;
 
 import java.io.*;
 
 public class LongestWordWrite {
     private static String longestWord = " ";
     public static void getLongestWord() {
-        try(FileReader fr = new FileReader("src\\lesson14\\homework\\fileWithText.txt")) {
+        try(FileReader fr = new FileReader("src/lesson14/homework/task1/fileWithText.txt")) {
             StringBuilder text = new StringBuilder();
             int i;
             while ((i = fr.read()) != -1) {
@@ -23,7 +23,7 @@ public class LongestWordWrite {
         }
     }
     public static void writeLongestWord(){
-        try (FileWriter fw  = new FileWriter("src/lesson14/homework/fileWithLongestWord.txt")){
+        try (FileWriter fw  = new FileWriter("src/lesson14/homework/task1/fileWithLongestWord.txt")){
             fw.write(longestWord);
             System.out.println("Longest word written to file successfully");
         } catch (IOException e) {
