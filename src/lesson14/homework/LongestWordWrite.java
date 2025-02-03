@@ -11,7 +11,7 @@ public class LongestWordWrite {
             while ((i = fr.read()) != -1) {
                 text.append((char) i);
             }
-            String[] words = text.toString().split(("\\s+"));
+            String[] words = text.toString().split("\\W");
             for (String word : words) {
                 if (word.length() > longestWord.length()) {
                     longestWord = word;
